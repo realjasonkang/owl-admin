@@ -72,6 +72,18 @@ class Manager
         $this->extensions->each->boot();
     }
 
+    /**
+     * 初始化已启用扩展的请求级状态。
+     *
+     * @return void
+     */
+    public function requestBoot(): void
+    {
+        // 长驻进程中启用状态可能在上一请求发生变化，不能复用旧的设置集合。
+        $this->settings = null;
+        $this->available()->each->requestBoot();
+    }
+
     public function initRoutes()
     {
         $this->extensions->each->initRoutes();

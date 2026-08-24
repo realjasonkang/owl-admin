@@ -34,6 +34,7 @@ class Bootstrap
         SqlRecord::$sql = [];
 
         Admin::bootstrap();
+        Admin::extension()->requestBoot();
 
         return $next($request);
     }

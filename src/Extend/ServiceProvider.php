@@ -106,6 +106,18 @@ abstract class ServiceProvider extends LaravelServiceProvider
 
     }
 
+    /**
+     * 每次后台请求初始化扩展状态。
+     *
+     * 该钩子在长驻进程请求隔离完成、应用 bootstrap 执行之后调用，
+     * 适合重新注册动态资源、顶部导航或请求级上下文。
+     *
+     * @return void
+     */
+    public function requestBoot(): void
+    {
+    }
+
     public function settingForm()
     {
         return null;
