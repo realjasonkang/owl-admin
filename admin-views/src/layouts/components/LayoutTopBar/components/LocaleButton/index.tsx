@@ -35,7 +35,8 @@ const LocaleButton = () => {
     }
 
     return (
-        <Dropdown placement="bottom"
+        <Dropdown getPopupContainer={() => document.getElementById('root')}
+                  placement="bottom"
                   arrow={{pointAtCenter: true}}
                   menu={{
                       items: items.map((i) => {

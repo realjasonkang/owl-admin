@@ -219,7 +219,8 @@ const SettingPanel = () => {
     const showSiderTheme = layoutMode !== 'double' && layoutMode !== 'top';
 
     return (
-        <Drawer open={state.openSetting}
+        <Drawer getContainer={() => document.getElementById('root')}
+                open={state.openSetting}
                 onClose={closeSetting}
                 closeIcon={false}
                 title={t('theme_setting.title')}
