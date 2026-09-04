@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "npm"
+    directory: "/admin-views"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "amis"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
+      - dependency-name: "amis-ui"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
+      - dependency-name: "amis-core"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
+      - dependency-name: "amis-editor"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
+      - dependency-name: "amis-editor-core"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
+    groups:
+      amis:
+        patterns:
+          - "amis"
+          - "amis-ui"
+          - "amis-core"
+          - "amis-editor"
+          - "amis-editor-core"
