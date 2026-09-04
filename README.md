@@ -22,7 +22,7 @@
     </a>
 &nbsp;
       <a href="https://aisuda.bce.baidu.com/amis/zh-CN/docs/index">
-        <img src="https://img.shields.io/badge/Amis-3.0%2B-%23268af1" alt="">
+        <img src="https://img.shields.io/badge/Amis-6.13.x%20(locked)-%23268af1" alt="">
     </a>
 &nbsp;
       <a href="https://packagist.org/packages/slowlyo/owl-admin">
@@ -42,6 +42,8 @@
 基于 `Laravel` 、 `amis` 开发的后台框架, 快速且灵活~
 
 当前版本支持 `Laravel 11.x - 13.x`。
+
+amis 上游已基本停更，本框架前端锁定 amis 6.13.0，稳健维护期不以追新 amis 版本为目标。
 
 - 基于 amis 以 json 的方式在后端构建页面，减少前端开发工作量，提升开发效率。
 - 在 amis 150多个组件都不满足的情况下, 可自行开发前端。
